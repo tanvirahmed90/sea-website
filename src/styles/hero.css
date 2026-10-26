@@ -1,0 +1,194 @@
+/* Hero Section — Exact Match to Reference Design */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+  padding-bottom: 4rem;
+}
+
+/* Background Ambient Chamber with Ceiling Skylight & Light Shaft */
+.hero-bg-environment {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/hero-underwater-chamber.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Left Vignette Shadow Overlay for Crisp Typography Contrast */
+.hero-vignette-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    #020812 0%, 
+    rgba(2, 8, 18, 0.95) 30%, 
+    rgba(2, 8, 18, 0.65) 50%, 
+    rgba(2, 8, 18, 0.15) 75%, 
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Top & Bottom Cinematic Edge Gradients */
+.hero-bg-environment::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 8, 18, 0.7) 0%,
+    transparent 18%,
+    transparent 80%,
+    #020812 100%
+  );
+  pointer-events: none;
+}
+
+/* Hero Container */
+.hero-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  min-height: calc(100vh - var(--nav-height) - 4rem);
+  width: 100%;
+}
+
+/* Hero Left Column Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 520px;
+  max-width: 620px;
+  z-index: 10;
+}
+
+/* Tagline Above Headline */
+.hero-tagline {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.01em;
+  margin-bottom: 2.2rem;
+}
+
+/* Big Crisp Headline */
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 4.8vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-bottom: auto;
+  text-wrap: balance;
+}
+
+/* Hero Bottom Left: Subtext & Button */
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-top: 4.5rem;
+  max-width: 480px;
+}
+
+.hero-subtext {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+}
+
+.desktop-br {
+  display: block;
+}
+
+/* Explore Work Button */
+.btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  padding: 0.75rem 1.75rem;
+  background: #ffffff;
+  color: #020812;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-explore .arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.btn-explore:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.35);
+  background: #f8fafc;
+}
+
+.btn-explore:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Hero Right Lightbeam Anchor */
+.hero-lightbeam-anchor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 0 2rem;
+  }
+  .hero-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 4rem 0;
+  }
+  .hero-content {
+    min-height: auto;
+    max-width: 100%;
+  }
+  .hero-bottom {
+    padding-top: 3rem;
+  }
+  .desktop-br {
+    display: inline;
+  }
+  .hero-bg-environment {
+    background-position: 70% center;
+    opacity: 0.75;
+  }
+}

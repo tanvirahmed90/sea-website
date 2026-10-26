@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foldcraft — Brand & Visual Storytelling</title>
+  <meta name="description" content="Foldcraft — Brand & Visual Storytelling studio. Shaping visual narratives, one pixel at a time." />
+  <link rel="stylesheet" href="./src/styles/hero-standalone.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 30,26 2,26' fill='%23ffffff'/%3E%3Ccircle cx='16' cy='18' r='4' fill='%23ff8f1c'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="hero-wrapper">
+    <!-- Full-screen Background: hero-bg.jpg with light beam positioned at 60-90% width -->
+    <img src="./hero-bg.jpg" class="hero-media" alt="Underwater Light Chamber" />
+    
+    <!-- Left Vignette Gradient Overlay for Crisp Text Contrast -->
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <!-- Fullscreen Canvas 2D for Real Photographic Fish & Floating Dust Motes -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- Transparent Navbar -->
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="#" class="nav-logo">Foldcraft</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#studio" class="nav-link">Studio</a></li>
+            <li><a href="#reach-us" class="nav-link">Reach Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <a href="#reach-us" class="btn-talk">Let's Talk</a>
+      </div>
+    </header>
+
+    <!-- Hero Body Content -->
+    <main class="hero-body">
+      <!-- Top Block: Label & 3-Line Headline -->
+      <div class="hero-top-block">
+        <div class="hero-label">Brand & Visual Storytelling</div>
+        <h1 class="hero-headline">
+          <span class="line">Shaping visual</span>
+          <span class="line">narratives,</span>
+          <span class="line">one pixel at a time.</span>
+        </h1>
+      </div>
+
+      <!-- Bottom-Left Block: Subtext & Explore Work Button -->
+      <div class="hero-bottom-block">
+        <p class="hero-desc">
+          Turning vision into reality through craft, motion, and an endless pursuit of beauty.
+        </p>
+        <div>
+          <a href="#projects" class="btn-explore">
+            Explore Work <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Hero Canvas 2D Script -->
+  <script type="module">
+    import { HeroCanvasController } from './src/hero-fish.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('hero-canvas');
+      if (canvas) {
+        new HeroCanvasController(canvas);
+      }
+    });
+  </script>
+</body>
+</html>

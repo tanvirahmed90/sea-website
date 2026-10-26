@@ -1,0 +1,45 @@
+:root {
+  /* Ocean Depth Color Palette */
+  --bg-deep: #020812;
+  --bg-surface: #072b38;
+  --bg-midwater: #041a29;
+  --bg-midnight: #020f1a;
+  --bg-abyss: #01050a;
+
+  --teal-primary: #0f6f86;
+  --teal-glow: #14b8a6;
+  --cyan-bright: #00f0ff;
+  --cyan-soft: #38bdf8;
+  
+  /* Fish Accent Colors */
+  --fish-orange: #ff8f1c;
+  --fish-gold: #ffd166;
+  --fish-amber: #e65100;
+  --fish-glow: rgba(255, 143, 28, 0.5);
+
+  /* Fauna Accents */
+  --jelly-cyan: #00f0ff;
+  --jelly-purple: #c084fc;
+  --angler-lure: #38ef7d;
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #8496ab;
+  --text-dim: #475569;
+
+  /* Glassmorphism & UI */
+  --glass-bg: rgba(7, 24, 40, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(0, 240, 255, 0.35);
+  --glass-glow: rgba(0, 240, 255, 0.12);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Layout */
+  --container-max: 1360px;
+  --nav-height: 84px;
+}
